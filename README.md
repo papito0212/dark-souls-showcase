@@ -6,8 +6,8 @@
 
 ## Design of this project (Guide)
 
-![MAMAGUEVO](https://github.com/papito0212/dark-souls-showcase/assets/dark-souls-showcase-design.png)
+![MAMAGUEVO](https://github.com/papito0212/dark-souls-showcase/blob/main/assets/dark-souls-showcase-design.png)
 
 ## Colors and fonts
 
-![MAMAGUEVO](https://github.com/papito0212/dark-souls-showcase/assets/dark-souls-showcase-colors-fonts.png)
+![MAMAGUEVO](https://github.com/papito0212/dark-souls-showcase/blob/main/assets/dark-souls-showcase-colors-fonts.png)
