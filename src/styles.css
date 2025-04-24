@@ -16,3 +16,9 @@ body {
     flex-direction: row;
     justify-content: center;
 }
+
+.top {
+    background-color: #1f2937;
+    display: flex;
+    justify-content: space-between;
+}
