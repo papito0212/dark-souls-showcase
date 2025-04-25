@@ -1,3 +1,17 @@
+/*<||========================= Global =========================||> */
+
+:root {
+	--base-color-1: #1f2937;
+	--base-color-2: #e5e7eb;
+	--base-color-3: #4882f6;
+
+	--base-content-color-1: #e5e7eb;
+	--base-content-color-2: #000;
+	--base-content-color-3: #e5e7eb;
+
+	--content-padding: 12.5%;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -9,11 +23,26 @@ html {
 	font-size: 62.5%;
 }
 
-html, body {
+html,
+body {
 	font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
+button {
+	cursor: pointer;
+}
+
+button:hover, a:hover {
+	filter: brightness(1.1);
+}
+
+button:active {
+	filter: brightness(0.9);
+}
+
 /*<||========================= Custom CSS =========================||> */
+
+/* |=|=|=|=> Layout <=|=|=|=| */
 
 body > article {
 	width: 100%;
@@ -21,39 +50,48 @@ body > article {
 }
 
 body > article > header,
-body > article > main > * {
-	padding-left: 12.5%;
-	padding-right: 12.5%;
+body > article > main > *,
+body > article > footer {
+	padding-left: var(--content-padding);
+	padding-right: var(--content-padding);
 	font-size: 1.6rem;
 }
+
+/* Header */
 
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-  flex-wrap: wrap;
-	background-color: #1f2937;
+	flex-wrap: wrap;
+	background-color: var(--base-color-1);
 }
 
 header a {
 	text-decoration: none;
-	color: #e5e7eb;
-	font-size: 1.8rem;
+	color: var(--base-content-color-1);
+	font-size: 1.6rem;
 }
 
-header > .logo img {
+header a:hover {
+	text-decoration: underline;
+}
+
+header > .logo > img {
 	min-width: 200px;
 	min-height: 50px;
 	height: 100%;
 }
 
-header > .nav-bar ul {
+header > .nav-bar > ul {
 	list-style: none;
 	display: flex;
 	justify-content: space-evenly;
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 	gap: 25px;
 }
+
+/* Main */
 
 main {
 	display: flex;
@@ -61,7 +99,7 @@ main {
 }
 
 main > * {
-  display: flex;
+	display: flex;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	min-height: 300px;
@@ -72,75 +110,14 @@ main img {
 	height: 80%;
 	min-width: 200px;
 	min-height: 150px;
-	background-color: #e5e7eb;
-  border: 3px solid #1f2937;
-  border-radius: 10px;
-} 
+	background-color: var(--base-color-2);
+	border: 3px solid var(--base-color-1);
+	border-radius: 10px;
+}
 
 main > * > h2 {
 	text-align: center;
 	margin-bottom: 30px;
-}
-
-/* |=|=|=|=> Sections <=|=|=|=| */
-
-
-/* Introduction */
-.intro {
-	justify-content: center;
-	align-items: center;
-	gap: 10%;
-  flex-wrap: wrap;
-  background-color: #1f2937;
-  color: #e5e7eb;
-}
-
-.intro > .card {
-  flex: 1;
-  padding: 0;
-}
-
-.intro > .card > .actions > button { 
-  flex: unset;
-}
-
-.intro > img {
-  max-width: 800px;
-  min-width: 300px;
-  height: 300px;
-}
-
-/* Information */
-
-.info {
-  flex-direction: column;
-}
-
-/* Phrase */
-
-.phrase {
-	background-color: #e5e7eb;
-}
-
-/* Call to action */
-
-.call-to-action {
-  justify-content: center;
-  align-items: center;
-}
-
-.call-to-action > .card {
-  flex: 1;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  color: #e5e7eb;
-  background-color: #4882F6;
-}
-
-.call-to-action > .card > .content {
-  width: 75%;
 }
 
 /* Footer */
@@ -150,13 +127,74 @@ article > footer {
 	align-items: center;
 	justify-content: center;
 	height: 50px;
-  font-size: 1.4rem;
-	color: #e5e7eb;
-	background-color: #1f2937;
+	font-size: 1.4rem;
+	color: var(--base-content-color-1);
+	background-color: var(--base-color-1);
+}
+
+/* |=|=|=|=> Sections <=|=|=|=| */
+
+/* Introduction */
+.intro {
+	justify-content: center;
+	align-items: center;
+	gap: 10%;
+	flex-wrap: wrap;
+	background-color: var(--base-color-1);
+	color: var(--base-content-color-1);
+}
+
+.intro > .card {
+	flex: 1;
+	padding: 0;
+}
+
+.intro > .card > .actions > button {
+	flex: unset;
+}
+
+.intro > img {
+	max-width: 800px;
+	min-width: 300px;
+	height: 300px;
+}
+
+/* Information */
+
+.info {
+	flex-direction: column;
+}
+
+/* Phrase */
+
+.phrase {
+	background-color: var(--base-color-2);
+}
+
+/* Call to action */
+
+.call-to-action {
+	justify-content: center;
+	align-items: center;
+}
+
+.call-to-action > .card {
+	flex: 1;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	color: var(--base-content-color-3);
+	background-color: var(--base-color-3);
+}
+
+.call-to-action > .card > .content {
+	width: 75%;
 }
 
 /* |=|=|=|=> Components <=|=|=|=| */
 
+/* Blockquote */
 
 blockquote {
 	display: flex;
@@ -166,22 +204,24 @@ blockquote {
 }
 
 blockquote > p {
-  font-size: 3.6rem;
-  font-weight: lighter;
-  font-style: italic;
+	font-size: 3.6rem;
+	font-weight: lighter;
+	font-style: italic;
 }
 
 blockquote > footer {
-  font-weight: bold;
-  font-size: 2rem;
+	font-weight: bold;
+	font-size: 2rem;
 }
+
+/* Image Showcase */
 
 .image-showcase {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-  gap: 50px;
-  flex-wrap: wrap;
+	gap: 50px;
+	flex-wrap: wrap;
 }
 
 .image-showcase > div {
@@ -190,46 +230,47 @@ blockquote > footer {
 	justify-content: center;
 	align-items: center;
 	gap: 15px;
-  flex: 1;
-  text-align: center;
+	flex: 1;
+	text-align: center;
 }
 
+/* Card */
+
 .card {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 15px 0;
-  padding: 40px 10%;
-  border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin: 15px 0;
+	padding: 40px 10%;
+	border-radius: 10px;
 }
 
 .card > h2 {
-  font-size: 4.8rem;
+	font-size: 4.8rem;
 }
 
 .card > .content {
-  font-size: 1.8rem;
+	font-size: 1.8rem;
 }
 
 .card > .actions {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .card > .actions button {
-  flex: 1;
-  font-size: 1.6rem;
-  font-weight: bold;
-  padding: 5px 20px;
-  border: 3px solid #4882F6;
-  border-radius: 8px;
-  color: #e5e7eb;
-  background-color: #4882F6;
+	flex: 1;
+	font-size: 1.6rem;
+	font-weight: bold;
+	padding: 5px 20px;
+	border: 3px solid var(--base-color-3);
+	border-radius: 8px;
+	color: var(--base-content-color-3);
+	background-color: var(--base-color-3);
 }
 
-.card > .actions button.light {
-  border-color: #e5e7eb;
+.card > .actions button.alt {
+	border-color: var(--base-color-2);
 }
-
