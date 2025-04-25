@@ -64,13 +64,15 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	padding: 15px 0;
+	min-height: 50px;
 	background-color: var(--base-color-1);
 }
 
 header a {
+	font-size: 1.6rem;
 	text-decoration: none;
 	color: var(--base-content-color-1);
-	font-size: 1.6rem;
 }
 
 header a:hover {
@@ -78,9 +80,9 @@ header a:hover {
 }
 
 header > .logo > img {
-	min-width: 200px;
-	min-height: 50px;
+	width: 200px;
 	height: 100%;
+	object-fit: contain;
 }
 
 header > .nav-bar > ul {
@@ -109,10 +111,10 @@ main img {
 	width: 50%;
 	height: 80%;
 	min-width: 200px;
-	min-height: 150px;
-	background-color: var(--base-color-2);
+	min-height: 200px;
 	border: 3px solid var(--base-color-1);
 	border-radius: 10px;
+	object-fit: contain;
 }
 
 main > * > h2 {
@@ -154,9 +156,10 @@ article > footer {
 }
 
 .intro > img {
-	max-width: 800px;
+	width: 100%;
+	max-width: 600px;
 	min-width: 300px;
-	height: 300px;
+	min-height: 300px;
 }
 
 /* Information */
