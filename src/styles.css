@@ -2,140 +2,175 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-    /* border: 3px solid red; */
-   
+	/* border: 3px solid red; */
+}
+
+img {
+	min-width: 200px;
+	min-height: 50px;
+	border: 1px solid red;
 }
 
 a {
-    text-decoration: none;
-    color: darkgray;
+	text-decoration: none;
+	color: darkgray;
 }
 
-
 body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 body > article {
-    width: 100%;
-    height: 100dvh;
+	width: 100%;
+	height: 100dvh;
 }
 
-.top {
-    background-color: #1f2937;
-    display: flex;
-    justify-content: space-between;
-    padding: 9px 50px;
+header {
+	background-color: #1f2937;
+	display: flex;
+	justify-content: space-between;
+	padding: 9px 50px;
+}
+
+article > header,
+article > main > *,
+article > footer {
+	padding: 0 15%;
+}
+
+article > main > * {
+	min-height: 300px;
 }
 
 .logo > img {
-    width: 200px;
+	width: 200px;
 }
 
 .links {
-    list-style-type: none;
-    display: flex;
-    gap: 8px;
-    font-size: 18px;
+	list-style-type: none;
+	display: flex;
+	gap: 8px;
+	font-size: 18px;
 }
 
 .intro {
-    display: flex;
-    padding: 100px 200px;
-    gap: 15px;
-    background-color: #1f2937;
+	display: flex;
+	padding: 100px 200px;
+	gap: 25px;
+	background-color: #1f2937;
+}
+
+.intro img {
+	width: 100%;
+	height: 100%;
+	min-width: 300px;
+	min-height: 200px;
 }
 
 h1 {
-    color: #f9faf8;
-    font-size: 48px;
-    font-weight: 900;
+	color: #f9faf8;
+	font-size: 48px;
+	font-weight: 900;
 }
 
 .subtext {
-   font-size: 18px;
-   color: darkgray; 
+	font-size: 18px;
+	color: darkgray;
 }
 
 .btn {
-    padding: 2.5px 10px;
-    background-color: #3882f6;
-    border-color: #3882f6;
-    color: white;
-    border-radius: 10.1px;
+	padding: 2.5px 10px;
+	background-color: #3882f6;
+	border-color: #3882f6;
+	color: white;
+	border-radius: 10.1px;
 }
 
-.times > img {
-    width: 100px;
-    height: 100px;
-  }
-  
-h2  {
-    font-size: 36px;
-    font-weight: 900;
-    text-align: center;
-    color: #1f2937;
-  }
-  
-  .items {
-    display: flex;
-    justify-content: center;
-    gap: 52px;
-  }
-  
-  .text {
-    text-align: center;
-  }
-  
-  .items > div {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.items > img {
+	width: 100px;
+	height: 100px;
+}
 
-  .phrase {
-    background-color: #e5e7eb;
-    font-size: 36px;
-    font-style: italic;
-    color: #1f2937;
-  }
- .quote {
-    text-align: center;
-    padding: 100px 250px;
-    text-align: left;
- }
+h2 {
+	font-size: 36px;
+	font-weight: 900;
+	text-align: center;
+	color: #1f2937;
+}
 
- .quote-footer {
-    text-align: right;
-    padding: 0 200px;
-    font-weight: bold;
- }
+.items {
+	display: flex;
+	justify-content: center;
+	gap: 52px;
+}
 
- .call-to-action {
-    display: flex;
-    justify-content: center;
-    background-color: #3882f6;
-    margin: 100px 250px;
-    justify-content: space-between;
- }
+.text {
+	text-align: center;
+}
 
- .advertising {
-  color: white;
-  padding: 10px 20px;
- }
+.items > div {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
- .call-to-action > div > button{
-    border-color: white;
-    margin: 18px 30px 0 0;
- }
+.phrase {
+	display: flex;
+	align-items: center;
+	padding: 100px;
+	background-color: #e5e7eb;
+	color: #1f2937;
+}
 
-footer {
-  text-align: center;
-  background-color: #1f2937;
-  color: white;
-  padding: 25px;
+blockquote {
+	display: flex;
+	flex-direction: column;
+}
+
+blockquote > p {
+	font-weight: lighter;
+	font-style: italic;
+	text-align: center;
+	font-size: 36px;
+}
+
+blockquote > footer {
+	text-align: right;
+	font-weight: bold;
+}
+
+.call-to-action {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.call-to-action > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 50px;
+	border-radius: 10px;
+	background-color: #3882f6;
+}
+
+.advertising {
+	color: white;
+	padding: 10px 20px;
+}
+
+.call-to-action > div > button {
+	border-color: white;
+	margin: 18px 30px 0 0;
+}
+
+article > footer {
+	text-align: center;
+	background-color: #1f2937;
+	color: white;
+	padding: 25px;
 }
